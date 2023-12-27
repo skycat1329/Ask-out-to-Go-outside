@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background: radial-gradient(rgb(255, 255, 255), rgb(224, 141, 245));
+}
+img{
+    width: 300px;
+    mix-blend-mode: darken;
+}
+
+#noButton {
+  position: absolute;
+  margin-left: 150px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+#yesButton {
+  position: absolute;
+  margin-right: 150px;
+  margin-top: 30px;
+}
+
+.header_text {
+  font-family:cursive;
+  font-size: 50px;
+  font-weight: bold;
+
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #75009c;
+}
+
+.text {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: #017cff;
+  color: white;
+  font-weight: 600;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 3px black;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #017cff;
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  color: white;
+  margin-left: 50%;
+}
+p a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.25;
+}
+#credit{
+  position: absolute;
+  top: 500px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  left: -410px;
+  
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div>
+        <h1 class="header_text">Do you wanna go out with me 💖?</h1>
+      </div>
+      <div class="gif_container">
+        <img
+          src="https://media1.tenor.com/m/lDWD76XLdlsAAAAC/suga-yoongii.gif "
+          alt="bts"
+        />
+      </div>
+     
+     
+      <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button
+          class="btn"
+          id="noButton"
+          onmouseover="changingButton()"
+          onclick="changingButton()"
+        >
+       
+        <span id="msg">No</span>
+        </button>
+      
+        
+        <script>
+    
+          function nextPage() {
+          
+           
+            document.getElementById("msg").innerHTML = "Yeeyy ! Finally💖 ";
+           
+              window.location.href = "video.html";
+              
+            
+            
+          }
+
+          function changingButton() {
+            var x =
+              Math.random() *
+              (window.innerWidth -
+                document.getElementById("noButton").offsetWidth);
+            var y =
+              Math.random() *
+              (window.innerHeight -
+                document.getElementById("noButton").offsetHeight);
+            document.getElementById("noButton").style.left = `${x}px`;
+            document.getElementById("noButton").style.top = `${y}px`;
+          }
+
+
+         
+        </script>
+        <p id="credit">Made By Akash 🧡</p>
+      </div>
+     
+    </div>
+  </body>
+</html>
